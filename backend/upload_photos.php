@@ -14,13 +14,19 @@
        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
        <style>
            body {
-               display: flex;
+               margin: 0;
+               padding: 0;
+               
+           }
+           .bichko{
+              display: flex;
                flex-direction: column;
                align-items: center;
                justify-content: space-between;
-               background: linear-gradient(to right, #8E24AA, #b06ab3);
-               color: #D7D7EF;
+               background: white;
+               color: #140407;
                font-family: 'Lato', sans-serif;
+
            }
 
            h2 {
@@ -36,7 +42,7 @@
                width: 450px;
                max-width: 100%;
                padding: 25px;
-               border: 1px dashed rgba(255, 255, 255, 0.4);
+               border: 1px dashed black;
                border-radius: 3px;
                transition: 0.2s;
            }
@@ -83,7 +89,91 @@
                height: 60px;
                text-transform: uppercase;
            }
-       </style>
+ nav {
+  display: flex;
+  padding: 1% 6%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: blue;
+  
+}
+nav img {
+  width: 150px;
+}
+.nav-links {
+  flex: 1;
+  text-align: left;
+}
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .text-box h1 {
+    font-size: 20px;
+  }
+  .nav-links ul li {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    background: #f44336;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+  }
+  nav .fa-solid {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .nav-links ul {
+    padding: 30px;
+  }
+}
+.head_imgs {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  
+}
+.head_imgs > img {
+  height: 6rem;
+  width: 6rem;
+  margin: 0rem 2rem;
+}
+.middleText {
+  text-align: center;
+  margin: 1rem 0rem;
+}
+
+</style>
    </head>
 
    <body>
@@ -91,9 +181,32 @@
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
        <!-- Include Bootstrap JavaScript with jQuery dependency -->
        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    
+       <div class="head_imgs">
+      <img src="../images/coatOfArms.png" />
+      <div class="middleText">
+        <h4 style="color: red">Government of Nepal</h4>
+        <h2>Senior Allowance Scheme</h2>
+      </div>
+      <img src="../images/nepal_flag.gif" />
+    </div>
+
+    <nav>
+      <div class="nav-links" id="navLinks">
+        <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="#abt">About</a></li>
+          <li><a href="about.pdf" target="_blank">Policy</a></li>
+          <li><a href="#ftr">Contact</a></li>
+          <li><a href="./login.html">LOGIN</a></li>
+        </ul>
+      </div>
+      <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
 
        <!-- Upload section -->
-       <div class="container d-flex justify-content-center mt-100">
+       <div class="container d-flex justify-content-center mt-100 bichko">
            <div class="row">
                <div class="col-md-12">
                    <h2>Upload Here</h2>

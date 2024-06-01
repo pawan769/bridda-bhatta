@@ -1,5 +1,5 @@
 -- Create the database
-CREATE DATABASE e_governance;
+-- CREATE DATABASE e_governance;
 
 -- Use the database
 USE e_governance;
