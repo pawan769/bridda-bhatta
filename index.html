@@ -50,7 +50,7 @@
             </a>
         </div>
     
-    <a href="#home"><i class="fa-solid fa-home" style="
+    <button onclick="scrollToTop()"><i class="fa-solid fa-home" style="
             position: fixed;
             bottom: 20px;
             right: 20px;
@@ -62,7 +62,7 @@
             cursor: pointer;
             box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
             z-index: 100;
-        "></i></a>
+        "></i></button>
 
 
     <!------------- Course ------------------->
@@ -282,6 +282,9 @@
       }
       function hideMenu() {
         navLinks.style.right = "-200px";
+      }
+      function scrollToTop(){
+        document.documentElement.scrollTop = 0;
       }
     </script>
   </body>
